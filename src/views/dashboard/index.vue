@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <div class="dashboard-text">欢迎</div>
   </div>
 </template>
 
@@ -13,6 +13,11 @@ export default {
     ...mapGetters([
       'name'
     ])
+  },
+  mounted() {
+    this.$http.get('/api/users/add').then(res => {
+      console.log('this.panels', res)
+    })
   }
 }
 </script>
