@@ -6,7 +6,7 @@ const feld={
     labels:Number
 }
 const router = require('koa-router')()
-const User = require('../db/models/user')
+const User = require('../db/models/user') 
 //自动添加更新时间创建时间:
 let personSchema = new Schema(feld, {timestamps: {createdAt: 'created', updatedAt: 'updated'}})
 export default model('User',personSchema)

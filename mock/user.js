@@ -27,9 +27,9 @@ export default [
   // user login
   {
     url: '/user/login',
-    type: 'post',
+    type: 'get',
     response: config => {
-      const { username } = config.body
+      const { username } = config.query
       const token = tokens[username]
 
       // mock error
@@ -73,7 +73,7 @@ export default [
   // user logout
   {
     url: '/user/logout',
-    type: 'post',
+    type: 'get',
     response: _ => {
       return {
         code: 20000,

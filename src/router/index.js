@@ -55,7 +55,7 @@ export const constantRoutes = [
     }]
   },
 
-  /**{
+  /** {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
@@ -169,12 +169,12 @@ export const constantRoutes = [
       component: () => import('@/views/school'),
       meta: { title: '学校管理', icon: 'school' }
     },
-      {
-        path: 'editor',
-        name: 'editor',
-        component: () => import('@/views/school/editor'),
-        meta: { title: '添加学校', icon: 'school' }
-      }]
+    {
+      path: 'editor',
+      name: 'editor',
+      component: () => import('@/views/school/editor'),
+      meta: { title: '添加学校', icon: 'school' }
+    }]
   },
   {
     path: '/academy',
@@ -187,12 +187,12 @@ export const constantRoutes = [
       component: () => import('@/views/academy'),
       meta: { title: '学院管理', icon: 'academy' }
     },
-      {
-        path: 'editor',
-        name: 'editor',
-        component: () => import('@/views/academy/editor'),
-        meta: { title: '添加学院', icon: 'academy' }
-      }]
+    {
+      path: 'editor',
+      name: 'editor',
+      component: () => import('@/views/academy/editor'),
+      meta: { title: '添加学院', icon: 'academy' }
+    }]
   },
   {
     path: '/classs',
@@ -205,12 +205,12 @@ export const constantRoutes = [
       component: () => import('@/views/classs'),
       meta: { title: '班级管理', icon: 'classs' }
     },
-      {
-        path: 'editor',
-        name: 'editor',
-        component: () => import('@/views/classs/editor'),
-        meta: { title: '添加班级', icon: 'classs' }
-      }]
+    {
+      path: 'editor',
+      name: 'editor',
+      component: () => import('@/views/classs/editor'),
+      meta: { title: '添加班级', icon: 'classs' }
+    }]
   },
   {
     path: '/student',
@@ -223,12 +223,12 @@ export const constantRoutes = [
       component: () => import('@/views/student/index'),
       meta: { title: '学生管理', icon: 'user' }
     },
-      {
-        path: 'editor',
-        name: 'editor',
-        component: () => import('@/views/student/editor'),
-        meta: { title: '添加学生', icon: 'user' }
-      }]
+    {
+      path: 'editor',
+      name: 'editor',
+      component: () => import('@/views/student/editor'),
+      meta: { title: '添加学生', icon: 'user' }
+    }]
   },
   {
     path: '/teacher',
@@ -241,19 +241,19 @@ export const constantRoutes = [
       component: () => import('@/views/teacher'),
       meta: { title: '老师管理', icon: 'user' }
     },
-      {
-        path: 'editor',
-        name: 'editor',
-        component: () => import('@/views/teacher/editor'),
-        meta: { title: '添加老师', icon: 'user' }
-      }]
+    {
+      path: 'editor',
+      name: 'editor',
+      component: () => import('@/views/teacher/editor'),
+      meta: { title: '添加老师', icon: 'user' }
+    }]
   },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
 
 const createRouter = () => new Router({
-  // mode: 'history', // require service support
+  mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRoutes
 })
